@@ -13,7 +13,7 @@
 <body>
     <div class="container">
         <div id="app">
-            <h1 class="page-title">Notes</h1>
+            <h1 class="page-title">{{ appTitle }}</h1>
             <ul class="list-group">
                 <li ref="noteItem" class="list-group-item" v-for="item in storeNoteLists" style="white-space: pre-line;"><button class="btn btn-danger btn-sm float-right" @click="deleteNote(item.id)"><span aria-hidden="true">Delete</span></button>{{item.message}}</li>
             </ul>

@@ -1,6 +1,7 @@
 var app = new Vue({
     el: '#app',
     data: {
+        appTitle : 'My Note',
         textMessage: '',
         storeNoteLists: [],
         showNoteLists: '',
