@@ -7,9 +7,6 @@ var app = new Vue({
         count:0
     },
     methods: {
-        showNote: function(){
-
-        },
         addNote: function(){
             if( this.textMessage ){
                 this.storeNoteLists.push({message:this.textMessage,id:this.count})
