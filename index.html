@@ -1,0 +1,30 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Vue JS</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <style>
+        .mt1{
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="app">
+            <h1 class="page-title">Notes</h1>
+            <ul class="list-group">
+                <li ref="noteItem" class="list-group-item" v-for="item in storeNoteLists" style="white-space: pre-line;"><button class="btn btn-danger btn-sm float-right" @click="deleteNote(item.id)"><span aria-hidden="true">Delete</span></button>{{item.message}}</li>
+            </ul>
+            <div class="mt1">
+                <p><textarea ref="inputMessage" v-model="textMessage" class="form-control" cols="30" rows="3"></textarea></p>
+                <div>
+                    <button @click="addNote" class="btn btn-primary float-right">Add Note</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="app.js" charset="utf-8"></script>
+</html>
