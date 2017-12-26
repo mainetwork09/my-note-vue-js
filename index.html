@@ -18,7 +18,7 @@
                 <li ref="noteItem" class="list-group-item" v-for="item in storeNoteLists" style="white-space: pre-line;"><button class="btn btn-danger btn-sm float-right" @click="deleteNote(item.id)"><span aria-hidden="true">Delete</span></button>{{item.message}}</li>
             </ul>
             <div class="mt1">
-                <p><textarea ref="inputMessage" v-model="textMessage" class="form-control" cols="30" rows="3"></textarea></p>
+                <p><textarea placeholder="enter text here" ref="inputMessage" v-model="textMessage" class="form-control" cols="30" rows="3"></textarea></p>
                 <div>
                     <button @click="addNote" class="btn btn-primary float-right">Add Note</button>
                 </div>
